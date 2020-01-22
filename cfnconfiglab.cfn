@@ -97,12 +97,12 @@
                 ]
             }
         },
-        "MySNSTopic": {
+        "MyRemediateSNSTopic": {
             "Type": "AWS::SNS::Topic"
         }
     },
     "Outputs": {
-        "mySNSTopicTopicARN": {
+        "myRemediateSNSTopicTopicARN": {
             "Description": "SNS topic ARN",
             "Value": {
                 "Ref": "MySNSTopic"
