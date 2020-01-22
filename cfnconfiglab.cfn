@@ -96,6 +96,19 @@
                     }
                 ]
             }
+        },
+        "MySNSTopic": {
+            "Type": "AWS::SNS::Topic"
+        }
+    },
+    "Outputs": {
+        "mySNSTopicTopicARN": {
+            "Description": "SNS topic ARN",
+            "Value": {
+                "Ref": "MySNSTopic"
+            }
         }
     }
 }
+
+
