@@ -105,7 +105,7 @@
         "myRemediateSNSTopicTopicARN": {
             "Description": "SNS topic ARN",
             "Value": {
-                "Ref": "MySNSTopic"
+                "Ref": "MyRemediateSNSTopic"
             }
         }
     }
