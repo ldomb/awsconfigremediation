@@ -97,18 +97,6 @@
                 ]
             }
         },
-        "MyRemediateSNSTopic": {
-            "Type": "AWS::SNS::Topic"
-        }
-    },
-    "Outputs": {
-        "myRemediateSNSTopicTopicARN": {
-            "Description": "SNS topic ARN",
-            "Value": {
-                "Ref": "MyRemediateSNSTopic"
-            }
-        }
-    }
 }
 
 
