@@ -1,3 +1,21 @@
+"""
+This Lambda function polls Config for noncompliant resources, and automatically
+applies remediation by replacing the 0.0.0.0/0 22/tcp inbound rule with
+172.31.0.0/16 22/tcp. Notifications are sent to an SNS topic.
+"""
+
+import boto3
+
+# AWS Config settings
+ACCOUNT_ID = boto3.client('sts').get_caller_identity()['Account']
+CONFIG_CLIENT = boto3.client('config')
+MY_RULE = "restricted-ssh"
+
+# EC2 Settings
+EC2_CLIENT = boto3.client('ec2')
+
+# AWS SNS Settings
+SNS_CLIENT = boto3.client('sns')
 SNS_TOPIC = 'arn:aws:sns:us-east-1:' + ACCOUNT_ID + ':' + 'config'
 SNS_SUBJECT = 'Compliance Update'
 
